@@ -21,13 +21,13 @@ Once you have Microsoft Office installed, you can follow the below steps:
 
 Open a blank spreadsheet in Microsoft Excel and click on `Data` from the menu.
 
-![Go to data](images/1_gotodata.png)
+![Go to data](Images/1_gotodata.png)
 
 ### Step 2:  Click on from web
 
 Once you click on `Data` it will show new menu items with a variety of options for extracting data. From there pick `From Web` and click on it. It will open a new Window.
 
-![Click from Web](images/2_clickfromweb.png)
+![Click from Web](Images/2_clickfromweb.png)
 
 ### Step 3: Type the URL in the address bar and click Go
 
@@ -37,19 +37,19 @@ You will see an Address bar in the `New Web Query` window. In this text box, typ
 
 It will load the website in the mini Web Browser. You can interact and browse the website here. Scroll down and click on a book link to open the book page
 
-![Scroll to book](images/4.scrolltobook.png)
+![Scroll to book](Images/4.scrolltobook.png)
 
 ### Step 5: Select the desired Table to scrape
 
 On the book page, you will find a table if you scroll down a bit. There will be a small yellow arrow icon that you can click. Clicking the button will select the table associated with it. Click on it. Once the table is selected click on the `Import` button below.
 
-![Click on import](images/5_clickimport.png)
+![Click on import](Images/5_clickimport.png)
 
 ### Step 6: Select "existing worksheet" and click ok
 
 When you click the Import Button a small window will appear similar to the below screenshot. Make sure Existing Worksheet is selected and click `OK`:
 
-![Select Existing Workbook](images/6_existingworksheet.png)
+![Select Existing Workbook](Images/6_existingworksheet.png)
 
 and that’s it! The Web Query will create a background process to run the web query and fetch the website. After fetching the website, it will parse the table and extract the text into the excel columns. The output will be similar to below.
 
@@ -57,7 +57,7 @@ and that’s it! The Web Query will create a background process to run the web q
 
 You can match it with the website and validate all the data from the table are correct.
 
-![output](images/7_extracteddata.png)
+![output](Images/7_extracteddata.png)
 
 All the columns and rows will be linked to the web query so whenever we refresh the data manually or automatically Microsoft Excel will know which rows or columns to update. In the next section, we will explore multiple ways to Refresh & Update Data.
 
@@ -72,7 +72,7 @@ In the automatic mode, Excel will periodically pull the data in the background a
 
 First, let’s delete a few items from the existing data so that we can validate the refresh works as expected.
 
-![delete a few data](images/8_cleardata.png)
+![delete a few data](Images/8_cleardata.png)
 
 Notice, we removed price, tax, and availability from the data.
 
@@ -80,24 +80,24 @@ Notice, we removed price, tax, and availability from the data.
 
 On the top menu under the Data Submenu, there is a button named `Refresh`. We can pull the latest data by clicking this button or we can press the shortcut `CTRL + ALT+ F5`. Once we click the `Refresh` The missing values of Prices, tax & Availability get refreshed with the latest prices, tax & availability respectively.
 
-![option1](images/9_refreshmanual.png)
+![option1](Images/9_refreshmanual.png)
 
 ### Option 2: Refresh from the context menu
 
 Let’s remove a few fields again to test an alternate way of data refresh. This time, we will use the `Refresh` button of the context menu instead of the Menu button. First, we will have to `right-click` on a cell and select `Refresh`. Note that, we will have to click cells that get updated by the web query. If we click on the other cells that are not part of the web query update this `Refresh` button won’t show up.
 
-![option 2](images/12_refreshclick.png)
+![option 2](Images/12_refreshclick.png)
 
 ### Option 3: Edit & Rerun the Query
 
 Now we will remove some fields again and then try another method of updating the data. After removing some data. Right Click on the cell, it will show an option `Edit Query`
 
-![option 3 a](images/10_rightclick.png)
+![option 3 a](Images/10_rightclick.png)
 
 Click on it.
 
 It will open a new window `Edit Web Query`. From this window, If we click import, The web query will run a background process to fetch the latest updates from the website and refresh the existing data, replacing old data with new data.
-[!option 3 b](images/11_clickimport.png)
+[!option 3 b](Images/11_clickimport.png)
 
 This method is useful if we want to update the scraper e.g. changing the website URL, updating the query to fetch a different table or page, etc.
 
@@ -107,11 +107,11 @@ Now, let’s learn how to avoid manual refresh and automate the whole refresh/up
 
 The steps are pretty simple. First, we will open the context menu again by right-clicking on a cell associated with a web query. From the menu, we will select Data Range Properties.
 
-![data range properties](images/13_datarange.png)
+![data range properties](Images/13_datarange.png)
 
 This will open up the `External Data Range Properties` window similar to the below:
 
-![data range properties](images/14_refresh_control.png)
+![data range properties](Images/14_refresh_control.png)
 
 Here we are looking for the Refresh Controls. By checking these checkboxes we can automatically refresh the data. Go ahead and check the `Enable background refresh`. And then using the second checkbox we can tell excel to refresh data periodically after some time. So for example, if we set it to refresh after every 5 minutes. Excel will automatically pull the data every five minutes using a background process and update the table automatically.
 We won’t have to click any buttons.
