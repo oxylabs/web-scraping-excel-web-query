@@ -4,7 +4,6 @@
 
 [![](https://dcbadge.limes.pink/api/server/Pds3gBmKMH?style=for-the-badge&theme=discord)](https://discord.gg/Pds3gBmKMH) [![YouTube](https://img.shields.io/badge/YouTube-Oxylabs-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@oxylabs)
 
-[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
 
 In this article, we will learn how to implement a web scraper in Excel with Web Query. We will first explore the basics of Excel Web Scraping. After that, we will also write an excel scraper using Web Query to retrieve data into excel. So, let’s get started.
 
